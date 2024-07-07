@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class CalculateTest {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro número: ");
+        int num1 = Integer.parseInt(scanner.nextLine());
+        System.out.print("Adição +\nDiminuir -\nMultiplicar *\nDividir /\nDigite o modo: ");
+        String mode = scanner.nextLine();
+
+        int v = mode.length();
+        if (v == 2) {
+            System.out.print("Erro, por favor use apenas um simbolo");
+        } System.out.print("Digite o segundo númemro: ");
+          int num2 = Integer.parseInt(scanner.nextLine());
+
+            switch (mode) {
+                case "+" -> System.out.println(num1 + num2);
+                case "-" -> System.out.println(num1 - num2);
+                case "*" -> System.out.println(num1 * num2);
+                case "/" -> System.out.println(num1 / num2);
+                default -> System.out.print("Por favor, use um modo válido");
+        }
+    }
+}
